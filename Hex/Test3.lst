@@ -1,4 +1,4 @@
-C51 COMPILER V8.08   TEST3                                                                 06/02/2020 14:28:48 PAGE 1   
+C51 COMPILER V8.08   TEST3                                                                 06/04/2020 12:21:50 PAGE 1   
 
 
 C51 COMPILER V8.08, COMPILATION OF MODULE TEST3
@@ -26,7 +26,7 @@ line level    source
   16          sbit chnl1 = P3^3;
   17          sbit chnl2 = P3^4;
   18          
-  19          int j = 0;
+  19          // int j = 0;
   20          float first = 0;
   21          float second = 0;
   22          float third = 0;
@@ -35,216 +35,217 @@ line level    source
   25          float low_filter[5] = {0.035654, 0.24104, 0.44661, 0.24104, 0.035654};
   26          float high_filter[5] = {-0.000078131, -0.00052738, 0.9991, -0.00052738, -0.000078131};
   27          float notch_filter[5] = {-0.00042197, -0.0028487, 0.99515, -0.0028487, -0.00042197};
-  28          float x[5] = {0, 0, 0, 0, 0};
-  29          // Order 6
-  30                  // float filter[7] = {0, 0, 0, 0, 0, 0, 0};
-  31                  // float low_filter[7] = {0.024004, 0.093259, 0.23201, 0.30146, 0.23201, 0.093259, 0.024004};
-  32                  // float high_filter[7] = {-0.000078119, -0.00030271, -0.00075189, 0.99895, -0.00075189, -0.00030271, -0.
+  28          // float notch_filter[5] = {0.035709, 0.24107, 0.44644, 0.24107, 0.035709};
+  29          float x[5] = {0, 0, 0, 0, 0};
+  30          // Order 6
+  31                  // float filter[7] = {0, 0, 0, 0, 0, 0, 0};
+  32                  // float low_filter[7] = {0.024004, 0.093259, 0.23201, 0.30146, 0.23201, 0.093259, 0.024004};
+  33                  // float high_filter[7] = {-0.000078119, -0.00030271, -0.00075189, 0.99895, -0.00075189, -0.00030271, -0.
              -000078119};
-  33                  // float notch_filter[7] = {-0.00042152, -0.0016338, -0.0040586, 0.99431, -0.0040586, -0.0016338, -0.0004
+  34                  // float notch_filter[7] = {-0.00042152, -0.0016338, -0.0040586, 0.99431, -0.0040586, -0.0016338, -0.0004
              -2152};
-  34                  // float x[7] = {0, 0, 0, 0, 0, 0, 0};
-  35          // Order 14
-  36                  // float filter[15] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-  37                  // float low_filter[15] = {0.0205, -0.029, 0.0452, -0.0629, 0.0801, -0.0946, 0.1042, 0.8925, 0.1042, -0.0
+  35                  // float x[7] = {0, 0, 0, 0, 0, 0, 0};
+  36          // Order 14
+  37                  // float filter[15] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+  38                  // float low_filter[15] = {0.0205, -0.029, 0.0452, -0.0629, 0.0801, -0.0946, 0.1042, 0.8925, 0.1042, -0.0
              -946, 0.0801, -0.0629, 0.0452, -0.029, 0.0205};
-  38                  // float high_filter[15] = {-0.0381, -0.0357, -0.0489, -0.0621, -0.074, -0.0836, -0.0897, 0.9081, -0.0897
+  39                  // float high_filter[15] = {-0.0381, -0.0357, -0.0489, -0.0621, -0.074, -0.0836, -0.0897, 0.9081, -0.0897
              -, -0.0836, -0.074, -0.0621, -0.0489, -0.0357, -0.0381};
-  39                  // float notch_filter[15] = {-0.0385, -0.1105, -0.0207, 0.0888, 0.1633, 0.074, -0.1041, 0.8033, -0.1041, 
+  40                  // float notch_filter[15] = {-0.0385, -0.1105, -0.0207, 0.0888, 0.1633, 0.074, -0.1041, 0.8033, -0.1041, 
              -0.74, 0.1633, 0.0888, -0.0207, -0.1105, -0.0385};
-  40                  // float x[15] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-  41          
-  42          void delay(int dly)
-  43          {
-  44   1              int i; // k
-  45   1              // for (i = 0; i < dly; i++);
-  46   1              for(i = dly; i > 0; i--);
-  47   1              // for(k = 0; k < 128; k++);
-  48   1      }          
-  49          
-C51 COMPILER V8.08   TEST3                                                                 06/02/2020 14:28:48 PAGE 2   
+  41                  // float x[15] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+  42          
+  43          void delay(int dly)
+  44          {
+  45   1              int i; // k
+  46   1              // for (i = 0; i < dly; i++);
+  47   1              for(i = dly; i > 0; i--);
+  48   1              // for(k = 0; k < 128; k++);
+  49   1      }          
+C51 COMPILER V8.08   TEST3                                                                 06/04/2020 12:21:50 PAGE 2   
 
-  50          void timer0() interrupt 1  // Function to generate clock of frequency 500KHZ using Timer 0 interrupt.
-  51          {
-  52   1              clk =~ clk;
-  53   1      }
-  54          
-  55          void main()
-  56          {
-  57   1              EOC = 1;
-  58   1              input = 0xff;   // as port 0 bydefult low we have to made as high
-  59   1              ALE = 0;
-  60   1              OE = 0;
-  61   1              SC = 0; 
-  62   1              TMOD = 0x22;  // timer0 setting for generating clock of 500KHz using interrupt enable mode.
-  63   1              TH0 = 0xFD;
-  64   1              IE = 0x82;
-  65   1              TR0 = 1;
-  66   1              P3 = 0xff;
-  67   1              DAC = 0xff;
-  68   1              while(1)
-  69   1              {
-  70   2                      x[1] = x[0];
-  71   2                      x[2] = x[1];
-  72   2                      x[3] = x[2];
-  73   2                      x[4] = x[3];
-  74   2                      // x[5] = x[4];
-  75   2                      // x[6] = x[5];
-  76   2                      // x[7] = x[6];
-  77   2                      // x[8] = x[7];
-  78   2                      // x[9] = x[8];
-  79   2                      // x[10] = x[9];
-  80   2                      // x[11] = x[10];
-  81   2                      // x[12] = x[11];
-  82   2                      // x[13] = x[12];
-  83   2                      // x[14] = x[13];
-  84   2                      ALE = 1;
-  85   2                      delay(2);
-  86   2                      SC = 1;
-  87   2                      delay(1);
-  88   2                      ALE = 0;
-  89   2                      delay(1);
-  90   2                      SC = 0;
-  91   2                      while(EOC == 1);
-  92   2                      while(EOC == 0);
-  93   2                      OE = 1;
-  94   2                      x[0] = input;           
-  95   2                      if (chnl1 == 0 && chnl2 == 1)
-  96   2                      {
-  97   3                              ADD_C = 0, ADD_B = 0, ADD_A = 0;
-  98   3                              delay(2);
-  99   3                              if (lowpass == 0 && highpass == 1 && notchh == 1)
- 100   3                              {
- 101   4                                      // DAC = low_filter[6] * input + low_filter[5] * x[5] + low_filter[4] * x[4] + low_filter[3] * x[3] + 
+  50          
+  51          void timer0() interrupt 1  // Function to generate clock of frequency 500KHZ using Timer 0 interrupt.
+  52          {
+  53   1              clk =~ clk;
+  54   1      }
+  55          
+  56          void main()
+  57          {
+  58   1              EOC = 1;
+  59   1              input = 0xff;   // as port 0 bydefult low we have to made as high
+  60   1              ALE = 0;
+  61   1              OE = 0;
+  62   1              SC = 0; 
+  63   1              TMOD = 0x22;  // timer0 setting for generating clock of 500KHz using interrupt enable mode.
+  64   1              TH0 = 0xFD;
+  65   1              IE = 0x82;
+  66   1              TR0 = 1;
+  67   1              P3 = 0xff;
+  68   1              DAC = 0xff;
+  69   1              while(1)
+  70   1              {
+  71   2                      x[1] = x[0];
+  72   2                      x[2] = x[1];
+  73   2                      x[3] = x[2];
+  74   2                      x[4] = x[3];
+  75   2                      // x[5] = x[4];
+  76   2                      // x[6] = x[5];
+  77   2                      // x[7] = x[6];
+  78   2                      // x[8] = x[7];
+  79   2                      // x[9] = x[8];
+  80   2                      // x[10] = x[9];
+  81   2                      // x[11] = x[10];
+  82   2                      // x[12] = x[11];
+  83   2                      // x[13] = x[12];
+  84   2                      // x[14] = x[13];
+  85   2                      ALE = 1;
+  86   2                      delay(2);
+  87   2                      SC = 1;
+  88   2                      delay(1);
+  89   2                      ALE = 0;
+  90   2                      delay(1);
+  91   2                      SC = 0;
+  92   2                      while(EOC == 1);
+  93   2                      while(EOC == 0);
+  94   2                      OE = 1;
+  95   2                      x[0] = input;           
+  96   2                      if (chnl1 == 0 && chnl2 == 1)
+  97   2                      {
+  98   3                              ADD_C = 0, ADD_B = 0, ADD_A = 0;
+  99   3                              delay(2);
+ 100   3                              if (lowpass == 0 && highpass == 1 && notchh == 1)
+ 101   3                              {
+ 102   4                                      // DAC = low_filter[6] * input + low_filter[5] * x[5] + low_filter[4] * x[4] + low_filter[3] * x[3] + 
              -low_filter[2] * x[2] + low_filter[1] * x[1] + low_filter[0] * x[0];
- 102   4                                      DAC = low_filter[4] * input + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + low
+ 103   4                                      DAC = low_filter[4] * input + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + low
              -_filter[0] * x[0];
- 103   4                                      // DAC = low_filter[14] * input + low_filter[13] * x[13] + low_filter[12] * x[12] + low_filter[11] * x
+ 104   4                                      // DAC = low_filter[14] * input + low_filter[13] * x[13] + low_filter[12] * x[12] + low_filter[11] * x
              -[11] + low_filter[10] * x[10] + low_filter[9] * x[9] + low_filter[8] * x[8] + low_filter[7] * x[7] + low_filter[6] * x[6
              -] + low_filter[5] * x[5] + low_filter[4] * x[4] + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + l
              -ow_filter[0] * x[0];
- 104   4                                      OE = 0;
- 105   4                              }
- 106   3                              else if (highpass == 0 && lowpass == 1 && notchh == 1)
-C51 COMPILER V8.08   TEST3                                                                 06/02/2020 14:28:48 PAGE 3   
+ 105   4                                      OE = 0;
+ 106   4                              }
+C51 COMPILER V8.08   TEST3                                                                 06/04/2020 12:21:50 PAGE 3   
 
- 107   3                              {
- 108   4                                      // DAC = high_filter[6] * input + high_filter[5] * x[5] + high_filter[4] * x[4] + high_filter[3] * x[3
+ 107   3                              else if (highpass == 0 && lowpass == 1 && notchh == 1)
+ 108   3                              {
+ 109   4                                      // DAC = high_filter[6] * input + high_filter[5] * x[5] + high_filter[4] * x[4] + high_filter[3] * x[3
              -] + high_filter[2] * x[2] + high_filter[1] * x[1] + high_filter[0] * x[0];
- 109   4                                      DAC = high_filter[4] * input + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filter[1] * x[1] +
+ 110   4                                      DAC = high_filter[4] * input + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filter[1] * x[1] +
              - high_filter[0] * x[0];
- 110   4                                      // DAC =  high_filter[14] * input + high_filter[13] * x[13] + high_filter[12] * x[12] + high_filter[11
+ 111   4                                      // DAC =  high_filter[14] * input + high_filter[13] * x[13] + high_filter[12] * x[12] + high_filter[11
              -] * x[11] + high_filter[10] * x[10] + high_filter[9] * x[9] + high_filter[8] * x[8] + high_filter[7] * x[7] + high_filte
              -r[6] * x[6] + high_filter[5] * x[5] + high_filter[4] * x[4] + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filte
              -r[1] * x[1] + high_filter[0] * x[0];
- 111   4                                      OE = 0;                         
- 112   4                              }
- 113   3                              else if (notchh == 0 && highpass == 1 && lowpass == 1)
- 114   3                              {
- 115   4                                      // DAC = notch_filter[6] * input + notch_filter[5] * x[5] + notch_filter[4] * x[4] + notch_filter[3] *
+ 112   4                                      OE = 0;                         
+ 113   4                              }
+ 114   3                              else if (notchh == 0 && highpass == 1 && lowpass == 1)
+ 115   3                              {
+ 116   4                                      // DAC = notch_filter[6] * input + notch_filter[5] * x[5] + notch_filter[4] * x[4] + notch_filter[3] *
              - x[3] + notch_filter[2] * x[2] + notch_filter[1] * x[1] + notch_filter[0] * x[0];
- 116   4                                      DAC = notch_filter[4] * input + notch_filter[3] * x[3] + notch_filter[2] * x[2] + notch_filter[1] * x[
+ 117   4                                      DAC = notch_filter[4] * input + notch_filter[3] * x[3] + notch_filter[2] * x[2] + notch_filter[1] * x[
              -1] + notch_filter[0] * x[0];
- 117   4                                      // DAC = notch_filter[14] * input + notch_filter[13] * x[13] + notch_filter[12] * x[12] + notch_filter
+ 118   4                                      // DAC = notch_filter[14] * input + notch_filter[13] * x[13] + notch_filter[12] * x[12] + notch_filter
              -[11] * x[11] + notch_filter[10] * x[10] + notch_filter[9] * x[9] + notch_filter[8] * x[8] + notch_filter[7] * x[7] + not
              -ch_filter[6] * x[6] + notch_filter[5] * x[5] + notch_filter[4] * x[4] + notch_filter[3] * x[3] + notch_filter[2] * x[2] 
              -+ notch_filter[1] * x[1] + notch_filter[0] * x[0];
- 118   4                                      OE = 0;                         
- 119   4                              }                       
- 120   3                              else if (lowpass == 1 && highpass == 1 && notchh == 1)
- 121   3                              {
- 122   4                                      first = low_filter[4] * input + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + l
+ 119   4                                      OE = 0;                         
+ 120   4                              }                       
+ 121   3                              else if (lowpass == 1 && highpass == 1 && notchh == 1)
+ 122   3                              {
+ 123   4                                      first = low_filter[4] * input + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + l
              -ow_filter[0] * x[0];
- 123   4                                      second = high_filter[4] * input + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filter[1] * x[1
+ 124   4                                      second = high_filter[4] * input + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filter[1] * x[1
              -] + high_filter[0] * x[0];
- 124   4                                      third = notch_filter[4] * input + notch_filter[3] * x[3] + notch_filter[2] * x[2] + notch_filter[1] * 
+ 125   4                                      third = notch_filter[4] * input + notch_filter[3] * x[3] + notch_filter[2] * x[2] + notch_filter[1] * 
              -x[1] + notch_filter[0] * x[0];
- 125   4                                      DAC = first + second + third;
- 126   4                                      OE = 0;
- 127   4                              }
- 128   3                              else
- 129   3                              {
- 130   4                                      DAC = filter[4] * input + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0];
- 131   4                                      // DAC = filter[4] * input + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0]
+ 126   4                                      DAC = first + second + third;
+ 127   4                                      OE = 0;
+ 128   4                              }
+ 129   3                              else
+ 130   3                              {
+ 131   4                                      DAC = filter[4] * input + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0];
+ 132   4                                      // DAC = filter[4] * input + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0]
              -;
- 132   4                                      // DAC = filter[14] * input + filter[13] * x[13] + filter[12] * x[12] + filter[11] * x[11] + filter[10
+ 133   4                                      // DAC = filter[14] * input + filter[13] * x[13] + filter[12] * x[12] + filter[11] * x[11] + filter[10
              -] * x[10] + filter[9] * x[9] + filter[8] * x[8] + filter[7] * x[7] + filter[6] * x[6] + filter[5] * x[5] + filter[4] * x
              -[4] + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0];
- 133   4                                      OE = 0;
- 134   4                              }
- 135   3                      }
- 136   2                      else if (chnl2 == 0 && chnl1 == 1)
- 137   2                      {
- 138   3                              ADD_C = 0, ADD_B = 0, ADD_A = 1;
- 139   3                              delay(2);
- 140   3                              if (lowpass == 0 && highpass == 1 && notchh == 1)
- 141   3                              {
- 142   4                                      // DAC = low_filter[6] * input + low_filter[5] * x[5] + low_filter[4] * x[4] + low_filter[3] * x[3] + 
+ 134   4                                      OE = 0;
+ 135   4                              }
+ 136   3                      }
+ 137   2                      else if (chnl2 == 0 && chnl1 == 1)
+ 138   2                      {
+ 139   3                              ADD_C = 0, ADD_B = 0, ADD_A = 1;
+ 140   3                              delay(2);
+ 141   3                              if (lowpass == 0 && highpass == 1 && notchh == 1)
+ 142   3                              {
+ 143   4                                      // DAC = low_filter[6] * input + low_filter[5] * x[5] + low_filter[4] * x[4] + low_filter[3] * x[3] + 
              -low_filter[2] * x[2] + low_filter[1] * x[1] + low_filter[0] * x[0];
- 143   4                                      DAC = low_filter[4] * input + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + low
+ 144   4                                      DAC = low_filter[4] * input + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + low
              -_filter[0] * x[0];
- 144   4                                      // DAC = low_filter[14] * input + low_filter[13] * x[13] + low_filter[12] * x[12] + low_filter[11] * x
+ 145   4                                      // DAC = low_filter[14] * input + low_filter[13] * x[13] + low_filter[12] * x[12] + low_filter[11] * x
              -[11] + low_filter[10] * x[10] + low_filter[9] * x[9] + low_filter[8] * x[8] + low_filter[7] * x[7] + low_filter[6] * x[6
              -] + low_filter[5] * x[5] + low_filter[4] * x[4] + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + l
              -ow_filter[0] * x[0];
- 145   4                                      OE = 0;
- 146   4                              }
- 147   3                              else if (highpass == 0 && lowpass == 1 && notchh == 1)
-C51 COMPILER V8.08   TEST3                                                                 06/02/2020 14:28:48 PAGE 4   
+ 146   4                                      OE = 0;
+ 147   4                              }
+C51 COMPILER V8.08   TEST3                                                                 06/04/2020 12:21:50 PAGE 4   
 
- 148   3                              {
- 149   4                                      // DAC = high_filter[6] * input + high_filter[5] * x[5] + high_filter[4] * x[4] + high_filter[3] * x[3
+ 148   3                              else if (highpass == 0 && lowpass == 1 && notchh == 1)
+ 149   3                              {
+ 150   4                                      // DAC = high_filter[6] * input + high_filter[5] * x[5] + high_filter[4] * x[4] + high_filter[3] * x[3
              -] + high_filter[2] * x[2] + high_filter[1] * x[1] + high_filter[0] * x[0];
- 150   4                                      DAC = high_filter[4] * input + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filter[1] * x[1] +
+ 151   4                                      DAC = high_filter[4] * input + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filter[1] * x[1] +
              - high_filter[0] * x[0];
- 151   4                                      // DAC =  high_filter[14] * input + high_filter[13] * x[13] + high_filter[12] * x[12] + high_filter[11
+ 152   4                                      // DAC =  high_filter[14] * input + high_filter[13] * x[13] + high_filter[12] * x[12] + high_filter[11
              -] * x[11] + high_filter[10] * x[10] + high_filter[9] * x[9] + high_filter[8] * x[8] + high_filter[7] * x[7] + high_filte
              -r[6] * x[6] + high_filter[5] * x[5] + high_filter[4] * x[4] + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filte
              -r[1] * x[1] + high_filter[0] * x[0];
- 152   4                                      OE = 0;                         
- 153   4                              }
- 154   3                              else if (notchh == 0 && highpass == 1 && lowpass == 1)
- 155   3                              {
- 156   4                                      // DAC = notch_filter[6] * input + notch_filter[5] * x[5] + notch_filter[4] * x[4] + notch_filter[3] *
+ 153   4                                      OE = 0;                         
+ 154   4                              }
+ 155   3                              else if (notchh == 0 && highpass == 1 && lowpass == 1)
+ 156   3                              {
+ 157   4                                      // DAC = notch_filter[6] * input + notch_filter[5] * x[5] + notch_filter[4] * x[4] + notch_filter[3] *
              - x[3] + notch_filter[2] * x[2] + notch_filter[1] * x[1] + notch_filter[0] * x[0];
- 157   4                                      DAC = notch_filter[4] * input + notch_filter[3] * x[3] + notch_filter[2] * x[2] + notch_filter[1] * x[
+ 158   4                                      DAC = notch_filter[4] * input + notch_filter[3] * x[3] + notch_filter[2] * x[2] + notch_filter[1] * x[
              -1] + notch_filter[0] * x[0];
- 158   4                                      // DAC = notch_filter[14] * input + notch_filter[13] * x[13] + notch_filter[12] * x[12] + notch_filter
+ 159   4                                      // DAC = notch_filter[14] * input + notch_filter[13] * x[13] + notch_filter[12] * x[12] + notch_filter
              -[11] * x[11] + notch_filter[10] * x[10] + notch_filter[9] * x[9] + notch_filter[8] * x[8] + notch_filter[7] * x[7] + not
              -ch_filter[6] * x[6] + notch_filter[5] * x[5] + notch_filter[4] * x[4] + notch_filter[3] * x[3] + notch_filter[2] * x[2] 
              -+ notch_filter[1] * x[1] + notch_filter[0] * x[0];
- 159   4                                      OE = 0;                         
- 160   4                              }                       
- 161   3                              else if (lowpass == 1 && highpass == 1 && notchh == 1)
- 162   3                              {
- 163   4                                      first = low_filter[4] * input + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + l
+ 160   4                                      OE = 0;                         
+ 161   4                              }                       
+ 162   3                              else if (lowpass == 1 && highpass == 1 && notchh == 1)
+ 163   3                              {
+ 164   4                                      first = low_filter[4] * input + low_filter[3] * x[3] + low_filter[2] * x[2] + low_filter[1] * x[1] + l
              -ow_filter[0] * x[0];
- 164   4                                      second = high_filter[4] * input + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filter[1] * x[1
+ 165   4                                      second = high_filter[4] * input + high_filter[3] * x[3] + high_filter[2] * x[2] + high_filter[1] * x[1
              -] + high_filter[0] * x[0];
- 165   4                                      third = notch_filter[4] * input + notch_filter[3] * x[3] + notch_filter[2] * x[2] + notch_filter[1] * 
+ 166   4                                      third = notch_filter[4] * input + notch_filter[3] * x[3] + notch_filter[2] * x[2] + notch_filter[1] * 
              -x[1] + notch_filter[0] * x[0];
- 166   4                                      DAC = first + second + third;
- 167   4                                      OE = 0;
- 168   4                              }
- 169   3                              else
- 170   3                              {
- 171   4                                      DAC = filter[4] * input + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0];
- 172   4                                      // DAC = filter[4] * input + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0]
+ 167   4                                      DAC = first + second + third;
+ 168   4                                      OE = 0;
+ 169   4                              }
+ 170   3                              else
+ 171   3                              {
+ 172   4                                      DAC = filter[4] * input + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0];
+ 173   4                                      // DAC = filter[4] * input + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0]
              -;
- 173   4                                      // DAC = filter[14] * input + filter[13] * x[13] + filter[12] * x[12] + filter[11] * x[11] + filter[10
+ 174   4                                      // DAC = filter[14] * input + filter[13] * x[13] + filter[12] * x[12] + filter[11] * x[11] + filter[10
              -] * x[10] + filter[9] * x[9] + filter[8] * x[8] + filter[7] * x[7] + filter[6] * x[6] + filter[5] * x[5] + filter[4] * x
              -[4] + filter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0];
- 174   4                                      OE = 0;
- 175   4                              }
- 176   3                      }
- 177   2                      else if ((chnl2 == 0 && chnl1 == 0) || (chnl2 == 1 && chnl1 == 1))
- 178   2                      {
- 179   3                              DAC = filter[8] * input + filter[7] * x[7] + filter[6] * x[6] + filter[5] * x[5] + filter[4] * x[4] + f
+ 175   4                                      OE = 0;
+ 176   4                              }
+ 177   3                      }
+ 178   2                      else if ((chnl2 == 0 && chnl1 == 0) || (chnl2 == 1 && chnl1 == 1))
+ 179   2                      {
+ 180   3                              DAC = filter[8] * input + filter[7] * x[7] + filter[6] * x[6] + filter[5] * x[5] + filter[4] * x[4] + f
              -ilter[3] * x[3] + filter[2] * x[2] + filter[1] * x[1] + filter[0] * x[0];
- 180   3                              OE = 0;
- 181   3                      }
- 182   2              }
- 183   1      }
+ 181   3                              OE = 0;
+ 182   3                      }
+ 183   2              }
+ 184   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
@@ -252,10 +253,10 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =    114    ----
-   IDATA SIZE       =   ----    ----
-C51 COMPILER V8.08   TEST3                                                                 06/02/2020 14:28:48 PAGE 5   
+   DATA SIZE        =    112    ----
+C51 COMPILER V8.08   TEST3                                                                 06/04/2020 12:21:50 PAGE 5   
 
+   IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
 
