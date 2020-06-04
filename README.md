@@ -1,6 +1,6 @@
 # Electronics-Ehab
 
-***We seek to develop a <span style = "color: red;"> digital filteration </span> to analog signal using <span style = "color: blue;"> microcontroller 8051, adc0808 and dac0808 </span> ***
+***We seek to develop a <span style = "color: red;"> digital filteration </span> to analog signal using <span style = "color: blue;"> microcontroller 8051, adc0808 and dac0808 </span>***
 
 ## Simulation
 ![Simulation](https://github.com/mostafa20223/Electronics-Ehab/blob/master/Circuit%20Schematic%20and%20Design/Simulation.png)
