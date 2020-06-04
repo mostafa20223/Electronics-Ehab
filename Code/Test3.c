@@ -16,7 +16,7 @@ sbit notchh = P3^2;
 sbit chnl1 = P3^3;
 sbit chnl2 = P3^4;
 
-int j = 0;
+// int j = 0;
 float first = 0;
 float second = 0;
 float third = 0;
